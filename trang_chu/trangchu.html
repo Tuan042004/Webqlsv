@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="trangchu.css">
+    <title>Student Management Interface</title>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="menu">
+                <div class="menu-item" id="home-menu">Trang chủ
+                    <div class="submenu">
+                        <div class="submenu-item"><a href="#">Tin tức</a></div>
+                        <div class="submenu-item"><a href="#">Hồ sơ</a></div>
+                    </div>
+                </div>
+                <div class="menu-item" id="study-menu">Góc học tập
+                    <div class="submenu">
+                        <div class="submenu-item">Tra cứu điểm</div>
+                        <div class="submenu-item">Chương trình học</div>
+                        <div class="submenu-item">Đăng ký xin phúc khảo</div>
+                        <div class="submenu-item">Công nhận điểm</div>
+                        <div class="submenu-item">Xét tốt nghiệp</div>
+                    </div>
+                </div>
+                <div class="menu-item" id="register-menu">Đăng ký học
+                    <div class="submenu">
+                        <div class="submenu-item">Đăng ký</div>
+                        <div class="submenu-item">Nguyện vọng</div>
+                        <div class="submenu-item">Tra cứu kết quả đăng ký</div>
+                        <div class="submenu-item">Đăng ký định hướng ĐT</div>
+                        <div class="submenu-item">Đăng ký thi</div>
+                    </div>
+                </div>
+                <div class="menu-item" id="schedule-menu">Thời khóa biểu
+                    <div class="submenu">
+                        <div class="submenu-item">Lịch học</div>
+                        <div class="submenu-item">Lịch thi</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="header">
+                <div class="search-bar">
+                    <input type="text" placeholder="Tìm kiếm thông tin">
+                </div>
+                <div class="user-info">
+                    <a href="../login.html">
+                        <button type="button">ĐĂNG XUẤT</button>
+                    </a>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const homeMenu = document.getElementById('home-menu');
+            const studyMenu = document.getElementById('study-menu');
+            const registerMenu = document.getElementById('register-menu');
+            const scheduleMenu = document.getElementById('schedule-menu'); 
+
+            homeMenu.addEventListener('click', function() {
+                homeMenu.classList.toggle('open');
+            });
+
+            studyMenu.addEventListener('click', function() {
+                studyMenu.classList.toggle('open');
+            });
+
+            registerMenu.addEventListener('click', function() {
+                registerMenu.classList.toggle('open');
+            });
+
+            scheduleMenu.addEventListener('click', function() { 
+                scheduleMenu.classList.toggle('open');
+            });
+        });
+    </script> -->
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuItems = document.querySelectorAll('.menu-item');
+    
+            menuItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // Đóng tất cả các menu khác
+                    menuItems.forEach(menu => {
+                        if (menu !== item) {
+                            menu.classList.remove('open');
+                        }
+                    });
+    
+                    // Toggle menu hiện tại
+                    item.classList.toggle('open');
+                });
+            });
+        });
+    </script>
+    
+</body>
+</html>
